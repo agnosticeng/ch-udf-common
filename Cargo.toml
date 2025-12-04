@@ -1,0 +1,12 @@
+[package]
+name = "ch-udf-common"
+version = "0.0.1"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.98"
+arrow = "56.2.0"
+serde = "1.0.219"
+serde_json = "1.0.140"
+url = "2.5.4"
+thiserror = "2.0.12"
