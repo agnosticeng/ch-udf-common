@@ -22,3 +22,5 @@ itertools = "0.14.0"
 serde-inline-default = "0.2.3"
 backoff = "0.4.0"
 futures = "0.3.31"
+object_store = { version = "0.12.1", features = ["http", "aws"] }
+querystring = "1.1.0"
