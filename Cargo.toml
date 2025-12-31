@@ -4,16 +4,16 @@ version = "0.0.1"
 edition = "2024"
 
 [dependencies]
-anyhow = "1.0.98"
+anyhow = "1.0"
 arrow = "57"
-serde = "1.0.219"
-serde_json = "1.0.140"
+serde = "1.0"
+serde_json = "1.0"
 url = "2.5.4"
-thiserror = "2.0.12"
+thiserror = "2.0"
 tower = { version = "0.5.2", features = ["retry", "limit", "util"] }
-alloy = "1.0.30"
-alloy-json-rpc = "1.0.30"
-tokio = { version = "1.45.0", features = ["rt-multi-thread", "io-std", "io-util", "fs"] }
+alloy =  "1" 
+alloy-json-rpc = "1"
+tokio = { version = "1", features = ["full"] }
 tokio-util = "0.7.15"
 futures-core = "0.3.31"
 duration-str = "0.17.0"
@@ -22,5 +22,5 @@ itertools = "0.14.0"
 serde-inline-default = "0.2.3"
 backoff = "0.4.0"
 futures = "0.3.31"
-object_store = { version = "0.12.1", features = ["http", "aws"] }
+object_store = { version = "0.12", features = ["http", "aws"] }
 querystring = "1.1.0"
