@@ -1,8 +1,7 @@
 use querystring::querify;
-use url::Url;
 
-pub fn opts_from_url(u: &Url) -> Vec<(String, String)> {
-    querify(u.fragment().unwrap_or_default())
+pub fn opts_from_query_string(s: &str) -> Vec<(String, String)> {
+    querify(s)
         .into_iter()
         .map(|(k, v)| (k.to_string(), v.to_string()))
         .collect()
