@@ -1,4 +1,5 @@
 use arrow::array::{ArrayRef, RecordBatch};
+use arrow::error::ArrowError;
 use thiserror::Error;
 
 #[derive(Error, Debug)]
@@ -9,6 +10,8 @@ pub enum ArrowExtError {
     CannotDowncastColumn(String),
     #[error("cannot downcast array")]
     CannotDowncastArray,
+    #[error(transparent)]
+    Arrow(#[from] ArrowError),
 }
 
 pub trait RecordBatchExt {
